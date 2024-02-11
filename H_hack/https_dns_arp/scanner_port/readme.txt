@@ -1,0 +1,11 @@
+Este es un script de Python simple para escanear puertos en un host objetivo. Aquí está lo que hace cada función:
+
+1. `scan_ports(ports, target)`: Esta función toma una lista de puertos y un objetivo (host) como argumentos. Para cada puerto en la lista de puertos, crea un nuevo socket y llama a la función `port_scanner(port, target, s)`. La función `port_scanner` no está definida en este fragmento de código, pero probablemente intenta conectar el socket al host objetivo en el puerto especificado y registra si la conexión tiene éxito o no.
+
+2. `parse_port(port_str)`: Esta función toma una cadena de texto que representa uno o más puertos y devuelve una lista o rango de puertos. Si la cadena de texto contiene un guión ("-"), se asume que representa un rango de puertos y se devuelve un rango de números. Si la cadena de texto contiene una coma (","), se asume que representa una lista de puertos y se devuelve una lista de números. Si la cadena de texto no contiene ni un guión ni una coma, se asume que representa un solo puerto y se devuelve una tupla con un solo número.
+
+3. `main()`: Esta es la función principal del script. Obtiene los argumentos de la línea de comandos (presumiblemente el host objetivo y la cadena de texto que representa los puertos), parsea la cadena de texto para obtener la lista de puertos y luego llama a `scan_ports` para escanear los puertos en el host objetivo.
+
+4. `if __name__ == '__main__': main()`: Esta es una construcción común en los scripts de Python. Si el script se ejecuta directamente (en lugar de importarse como un módulo), el valor de `__name__` será `'__main__'` y la función `main()` se ejecutará. Si el script se importa como un módulo, el valor de `__name__` será el nombre del módulo y la función `main()` no se ejecutará.
+
+Por favor, ten en cuenta que este script depende de la función `get_arguments()` y `create_socket()`, que no están definidas en este fragmento de código. `get_arguments()` probablemente obtiene los argumentos de la línea de comandos y `create_socket()` probablemente crea un nuevo socket.
